@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;            
+        }  
+        #text-button {
+            margin : 0 auto;
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            background: #00aaff;
+            box-shadow: 0 4px 0 #0088cc;
+            color: white;
+    		font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text-button"><p id="text">タッチ</p></div>
+    <h1 id="answer"></h1>
+    <script>
+        document.getElementById("text-button").onclick = function() {
+            let words = ['January','February','March','April','May','June','July','August','September','October','November','December']
+            // 配列からランダムに選ぶためのインデックス
+            const randomIndex = Math.floor(Math.random() * words.length); 
+            // ランダムに選ばれた
+            document.getElementById('answer').innerText = words[randomIndex];
+        };
+    </script>
+</body>
+</html>
